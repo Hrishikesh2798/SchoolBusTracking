@@ -33,14 +33,14 @@
         android:layout_marginTop="370dp"
         android:text="Sign Up" />
 
-    <EditText
+    <TextView
         android:id="@+id/signUpText"
         android:layout_width="115dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="SignUp"
+        android:text="SignUp"
         android:textSize="30sp"
         android:textStyle="bold" />
 
