@@ -12,14 +12,14 @@
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="400dp"
         android:text="LogIn" />
 
     <Button
         android:id="@+id/signUpButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="480dp"
         android:text="Sign Up" />
 
     <EditText
@@ -50,5 +50,12 @@
         android:hint="LogIn"
         android:textSize="30sp"
         android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/registryType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:spinnerMode="dropdown" />
 
 </RelativeLayout>

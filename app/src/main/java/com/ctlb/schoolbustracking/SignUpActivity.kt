@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.core.view.marginTop
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_signup.*
 import kotlinx.android.synthetic.main.activity_signup.signUpButton
 
@@ -36,13 +35,13 @@ class SignUpActivity : AppCompatActivity() {
                 signUpButton.layoutParams = param
                 if(position == 0)
                 {
-                    regCode.visibility = View.VISIBLE
-                    name.visibility = View.INVISIBLE
+                    regCode.visibility = View.INVISIBLE
+                    name.visibility = View.VISIBLE
                 }
                 if(position == 1 || position == 2)
                 {
-                    name.visibility = View.VISIBLE
-                    regCode.visibility = View.INVISIBLE
+                    name.visibility = View.INVISIBLE
+                    regCode.visibility = View.VISIBLE
                 }
             }
         }
