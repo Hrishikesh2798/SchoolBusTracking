@@ -118,10 +118,6 @@ class ParentHomeActivity : AppCompatActivity(), OnMapReadyCallback {
         map = googleMap
         getLocationAccess()
 
-        // Add a marker in Sydney and move the camera
-        /* val sydney = LatLng(-34.0, 151.0)
-         val zoomlevel=15f
-         map.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-         map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,zoomlevel))*/
+
     }
 }
