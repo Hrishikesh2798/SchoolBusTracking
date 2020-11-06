@@ -1,31 +1,52 @@
 package com.ctlb.schoolbustracking
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ListView
-import android.widget.TextView
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_signup.*
+import kotlinx.android.synthetic.main.activity_viewbuses.*
 
-class ViewBusActivity : AppCompatActivity(){
+class ViewBusActivity : AppCompatActivity()
+{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_viewbuses)
 
         val listView = findViewById<ListView>(R.id.Viewbuses_listview)
         listView.adapter = MyCustomAdapter(this) // this needs to be my custom adapter telling my list what to render
+
+
+        Viewbuses_listview.setOnItemClickListener { parent:AdapterView<*>, view: View, position:Int, id:Long ->
+            if(position == 0)
+            {
+                Toast.makeText(this, "you click on first bus", Toast.LENGTH_SHORT).show()
+                val intent: Intent = Intent( this@ViewBusActivity , activity_popup ::class.java)
+                startActivity(intent)
+            }
+        }
     }
+
+
+
+
     private class MyCustomAdapter(context:Context): BaseAdapter() {
         private val busnumber = arrayListOf<String>(
                 // here we will take the buses from the database
-                "UP80 AH 8776", "UP80 PO 9872" ,"UP80 BH 9907" , "UP80 KM 6235" ,"UP80 AB 1223"
+                "UP80 AH 8776", "UP80 PO 9872" ,"UP80 BH 9907" , "UP80 KM 6235" ,"UP80 AB 1223",
+            "UP80 AH 8776", "UP80 PO 9872" ,"UP80 BH 9907" , "UP80 KM 6235" ,"UP80 AB 1223",
+            "UP80 AH 8776", "UP80 PO 9872" ,"UP80 BH 9907" , "UP80 KM 6235" ,"UP80 AB 1223"
         )
         private  val drivername = arrayListOf<String>(
-                "Rajesh", "Hrishikesh" ,"Vishal", "Charan(The GOD)" , "Aviral"
+                "Rajesh", "Hrishikesh" ,"Vishal", "Charan(The GOD)" , "Aviral",
+            "Rajesh", "Hrishikesh" ,"Vishal", "Charan(The GOD)" , "Aviral",
+            "Rajesh", "Hrishikesh" ,"Vishal", "Charan(The GOD)" , "Aviral"
         )
 
 
@@ -62,12 +83,10 @@ class ViewBusActivity : AppCompatActivity(){
             // here we are providing the nams to the DriverName{which is in the layout} from the database
             val driver_name_textview = row_viewbuses.findViewById<TextView>(R.id.driver_name)
             driver_name_textview.text = drivername.get(position)
-
-
-
             return row_viewbuses
-
         }
+
+
 
     }
 

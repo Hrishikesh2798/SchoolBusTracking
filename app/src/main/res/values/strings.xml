@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SchoolBusTracking</string>
+    <string name="app_name1">Kotlin AlertDialog</string>
+    <string name="button">click button</string>
+    <string name="dialogTitle">Delete File</string>
+    <string name="dialogMessage">Deleting file may be harm your system</string>
 </resources>

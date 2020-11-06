@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:padding="80dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/busnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:ems="10"
+        android:hint="Enter Bus Number" />
+
+    <EditText
+        android:id="@+id/driver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Driver Name"
+        android:layout_marginTop="210dp" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:text="Add" />
+
+    <TextView
+        android:id="@+id/signUpText"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/driver"
+        android:layout_alignStart="@+id/signUpButton"
+        android:layout_alignEnd="@+id/signUpButton"
+        android:layout_alignBottom="@+id/signUpButton"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="-253dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="376dp"
+        android:ems="10"
+        android:padding="1dp"
+        android:text="Adding Bus"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/driver"
+        android:layout_alignStart="@+id/busnumber"
+        android:layout_alignEnd="@+id/driver"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:hint="Enter Phone Number"
+        android:inputType="phone" />
+
+
+</RelativeLayout>
