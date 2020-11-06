@@ -43,6 +43,8 @@ class LogInActivity : AppCompatActivity() {
             val pwd: String = password.text.toString()
             Log.i("MainActivity",pwd)
             Toast.makeText(this,phone,Toast.LENGTH_LONG).show()
+            val intent = Intent(this, ParentHomeActivity::class.java)
+            startActivity(intent)
         }
 
         signUpButton.setOnClickListener {
